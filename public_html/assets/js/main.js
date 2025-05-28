@@ -26,10 +26,10 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".contact");
+    const forms = document.querySelectorAll(".contact");
     const loader = document.getElementById("form-loader");
     
-    if (form) {
+    forms.forEach(function(form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         if (loader) loader.classList.add("show");
@@ -37,7 +37,7 @@
           if (loader) loader.classList.remove("show");
         });
       });
-    }
+    });
   });
 
   function showToast(message, type = 'success') {
