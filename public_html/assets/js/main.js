@@ -8,7 +8,7 @@
     });
 
     try {
-      const response = await fetch("http://localhost:5678/webhook/submit-form", {
+      const response = await fetch("https://calm-parts-attend.loca.lt/webhook/submit-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
