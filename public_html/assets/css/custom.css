@@ -1,3 +1,10 @@
+.main-nav {
+    .logo {
+        img {
+            width: 180px;
+        }
+    }
+}
 #portfolio {
     margin-bottom: 150px;
 

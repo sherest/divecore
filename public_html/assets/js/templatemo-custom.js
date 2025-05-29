@@ -81,13 +81,12 @@
           })
           $(this).addClass('active');
         
-          var target = this.hash,
-          menu = target;
+          var menu = this.hash;
           var target = $(this.hash);
           $('html, body').stop().animate({
               scrollTop: (target.offset().top) + 1
           }, 500, 'swing', function () {
-              window.location.hash = target;
+              window.location.hash = menu;
               $(document).on("scroll", onScroll);
           });
       });
