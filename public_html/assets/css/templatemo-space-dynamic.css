@@ -315,13 +315,10 @@ header
   line-height: 80px;
 }
 
-.background-header .main-nav .nav {
-  margin-top: 20px !important;
-}
 
 .header-area .main-nav .nav {
   float: right;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-right: 0px;
   background-color: transparent;
   -webkit-transition: all 0.3s ease 0s;
@@ -581,10 +578,6 @@ header
 
 .header-area.header-sticky {
   min-height: 80px;
-}
-
-.header-area .nav {
-  margin-top: 30px;
 }
 
 .header-area.header-sticky .nav li a.active {
