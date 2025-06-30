@@ -44,7 +44,12 @@
   if($('.menu-trigger').length){
     $(".menu-trigger").on('click', function() { 
       $(this).toggleClass('active');
-      $('.header-area .nav').slideToggle(200);
+      var $nav = $('.header-area .nav');
+      $nav.slideToggle(200, function() {
+        if ($nav.is(':visible')) {
+          $nav.css('display', 'flex');
+        }
+      });
     });
   }
 

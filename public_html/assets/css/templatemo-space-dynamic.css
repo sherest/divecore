@@ -465,7 +465,7 @@ header
   cursor: pointer;
   display: block;
   position: absolute;
-  top: 33px;
+  /* top: 33px; */
   width: 32px;
   height: 40px;
   text-indent: -9999em;
@@ -648,6 +648,18 @@ header
     -o-transition: all 0s ease 0s;
     transition: all 0s ease 0s;
     margin-left: 0px;
+
+    /* mobile menu new */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: calc(-100px + 100vh);
+    background: rgb(247, 247, 247);
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 40px;
+    z-index: 998;
   }
   .background-header .nav {
     margin-top: 80px;
