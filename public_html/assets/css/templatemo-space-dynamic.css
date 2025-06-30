@@ -672,20 +672,20 @@ header
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #e7e7e7;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .header-area .main-nav .nav li a {
-    height: 50px !important;
-    line-height: 50px !important;
-    padding: 0px !important;
-    border: none !important;
-    background: #f7f7f7 !important;
-    color: #191a20 !important;
+    height: auto;
+    padding: 20px 0px;
+    border: none;
+    background: #f7f7f7;
+    color: #191a20;
+    font-size: 18px;
   }
   .header-area .main-nav .nav li a:hover {
-    background: #eee !important;
-    color: #fe3f40!important;
+    background: #eee;
+    color: #fe3f40;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
