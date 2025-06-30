@@ -654,11 +654,9 @@ header
     top: 0px;
     left: 0px;
     bottom: 0px;
-    height: calc(-100px + 100vh);
+    height: calc(100vh - 80px);
     background: rgb(247, 247, 247);
-    flex-direction: column;
     box-sizing: border-box;
-    gap: 40px;
     z-index: 998;
   }
   .background-header .nav {
@@ -840,7 +838,7 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 226px 0px 120px 0px;
+  padding: 226px 0px 0px 0px;
   position: relative;
   overflow: hidden;
 }
@@ -951,9 +949,10 @@ About Us Style
 
 #about {
   margin-top: 120px;
+  padding-top: 120px;
 }
 
-.about-us {
+.about-us .wrapper {
   background-image: url(../images/about-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -1298,7 +1297,7 @@ contact
 --------------------------------------------- 
 */
 
-.contact-us {
+.contact-us .wrapper {
   padding: 160px 0px;
   background-image: url(../images/contact-bg.png);
   background-repeat: no-repeat;
@@ -1469,10 +1468,7 @@ responsive
   .main-banner .left-content form input {
     width: 100%!important;
   }
-  #about {
-    margin-top: 0px;
-  }
-  .about-us {
+  .about-us .wrapper{
     position: relative;
     background-image: none;
     padding: 0px;
@@ -1539,7 +1535,7 @@ responsive
   }
   .contact-us {
     margin-top: 60px;
-    padding: 120px 0px;
+    padding: 0px;
   }
   .contact-us .section-heading {
     text-align: center;
