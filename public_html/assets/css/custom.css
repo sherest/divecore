@@ -3374,6 +3374,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile Responsive SEO Graphic */
 @media (max-width: 768px) {
+    .newsletter-text {
+        padding-left: 0 !important;
+        span{
+            font-size: 18px !important;
+            
+            &::before {
+                display: inline-block;
+                margin-right: 20px;
+            }
+        }
+    }
+
     .seo-analysis-graphic {
         height: 350px;
     }
@@ -5116,7 +5128,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 576px) {
     .newsletter-bar {
-        padding: 15px 0;
+        padding: 30px 0;
     }
 
     .newsletter-input-group {
