@@ -791,20 +791,58 @@
                   </div>
                   
                   <form class="audit-form" method="post" action="#">
-                    <div class="form-group">
-                      <input type="text" name="audit_name" placeholder="Your Name *" required>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <input type="text" name="audit_name" placeholder="Your Name *" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="tel" name="audit_phone" placeholder="Phone Number *" required>
+                      </div>
                     </div>
                     <div class="form-group">
                       <input type="email" name="audit_email" placeholder="Email Address *" required>
                     </div>
-                    <div class="form-group">
-                      <select name="audit_type" required>
-                        <option value="">Select Audit Type *</option>
-                        <option value="website">Website Audit</option>
-                        <option value="social">Social Media Audit</option>
-                        <option value="ads">Ad Account Audit</option>
-                        <option value="all">Complete Digital Audit (All 3)</option>
-                      </select>
+                    <div class="form-group audit-type-selection">
+                      <label class="audit-selection-label">Select Audit Type(s) *</label>
+                      <div class="checkbox-group">
+                                                 <div class="checkbox-item">
+                           <input type="checkbox" id="website_audit" name="audit_type[]" value="website">
+                           <label for="website_audit">
+                             <span class="checkbox-custom"></span>
+                             <span class="checkbox-text">
+                               <strong>Website Audit</strong>
+                             </span>
+                           </label>
+                         </div>
+                         <div class="checkbox-item">
+                           <input type="checkbox" id="social_audit" name="audit_type[]" value="social">
+                           <label for="social_audit">
+                             <span class="checkbox-custom"></span>
+                             <span class="checkbox-text">
+                               <strong>Social Media Audit</strong>
+                             </span>
+                           </label>
+                         </div>
+                         <div class="checkbox-item">
+                           <input type="checkbox" id="ads_audit" name="audit_type[]" value="ads">
+                           <label for="ads_audit">
+                             <span class="checkbox-custom"></span>
+                             <span class="checkbox-text">
+                               <strong>Ad Account Audit</strong>
+                             </span>
+                           </label>
+                         </div>
+                         <div class="checkbox-item featured">
+                           <input type="checkbox" id="complete_audit" name="audit_type[]" value="all">
+                           <label for="complete_audit">
+                             <span class="checkbox-custom"></span>
+                             <span class="checkbox-text">
+                               <strong>Complete Digital Audit</strong>
+                             </span>
+                             <span class="recommended-badge">Most Popular</span>
+                           </label>
+                         </div>
+                      </div>
                     </div>
                     <button type="submit" class="audit-submit-btn">
                       <i class="fa fa-rocket"></i>

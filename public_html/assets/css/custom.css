@@ -4549,7 +4549,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 120px 0;
   background: var(--surface-light);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .free-audit-section::before {
@@ -5134,5 +5134,269 @@ h1, h2, h3, h4, h5, h6 {
   .newsletter-button {
     padding: 10px 16px;
     font-size: 0.85rem;
+  }
+}
+/* Fix for audit dropdown visibility */
+.audit-container,
+.audit-form-container,
+.audit-form .form-group {
+  overflow: visible !important;
+}
+
+.audit-form select {
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+/* Custom Checkbox Styling for Audit Form */
+.audit-type-selection {
+  margin-bottom: 25px !important;
+}
+
+.audit-selection-label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.checkbox-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(226, 232, 240, 1);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.checkbox-item:hover {
+  border-color: var(--accent-color);
+  background: rgba(236, 72, 153, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.15);
+}
+
+.checkbox-item.featured {
+  border-color: var(--accent-color);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(236, 72, 153, 0.05));
+  position: relative;
+}
+
+.checkbox-item.featured::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--accent-color), #e91e63);
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.checkbox-item input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-item label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+}
+
+.checkbox-custom::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-item input[type="checkbox"]:checked + label .checkbox-custom {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.checkbox-item input[type="checkbox"]:checked + label .checkbox-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.checkbox-text {
+  flex: 1;
+}
+
+.checkbox-text strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.checkbox-text small {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  background: linear-gradient(135deg, var(--accent-color), #e91e63);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+/* Animation for checked state */
+.checkbox-item input[type="checkbox"]:checked + label {
+  color: var(--text-primary);
+}
+
+.checkbox-item:has(input[type="checkbox"]:checked) {
+  border-color: var(--accent-color);
+  background: rgba(236, 72, 153, 0.1);
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .checkbox-item {
+    padding: 12px;
+  }
+  
+  .checkbox-text strong {
+    font-size: 0.95rem;
+  }
+  
+  .checkbox-text small {
+    font-size: 0.8rem;
+  }
+  
+  .recommended-badge {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 8px;
+    display: inline-block;
+  }
+}
+
+/* Row layout adjustments for checkboxes */
+.checkbox-group {
+  flex-wrap: wrap;
+}
+
+.checkbox-item {
+  flex: 1;
+  min-width: 200px;
+  max-width: calc(25% - 9px);
+}
+
+/* Ensure recommended badge doesn't overlap */
+.checkbox-item.featured .recommended-badge {
+  top: -10px;
+  right: 8px;
+}
+
+/* Better spacing for row layout */
+@media (max-width: 1200px) {
+  .checkbox-item {
+    max-width: calc(50% - 6px);
+  }
+}
+
+@media (max-width: 768px) {
+  .checkbox-group {
+    flex-direction: column;
+  }
+  
+  .checkbox-item {
+    max-width: 100%;
+    flex: none;
+  }
+  
+  .checkbox-item.featured .recommended-badge {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 8px;
+    display: inline-block;
+  }
+}
+
+/* Form row layout for name and phone fields */
+.audit-form .form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.audit-form .form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Adjust checkbox styling without descriptions */
+.checkbox-item {
+  padding: 12px 16px;
+}
+
+.checkbox-text strong {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Remove spacing for small text since it's no longer there */
+.checkbox-text small {
+  display: none;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .audit-form .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .audit-form .form-row .form-group {
+    margin-bottom: 20px;
   }
 }
