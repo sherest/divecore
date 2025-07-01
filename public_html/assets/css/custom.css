@@ -1620,7 +1620,7 @@ form.contact button:hover {
     }
 
     #about {
-        padding: 60px 0;
+        padding: 45% 0;
     }
 
     /* Footer Mobile Styles */
@@ -1719,6 +1719,7 @@ form.contact button:hover {
 
     .highlight-item {
         margin-bottom: 12px;
+        justify-content: center;
     }
 
     .highlight-item span {
@@ -3380,7 +3381,7 @@ h1, h2, h3, h4, h5, h6 {
     .seo-container {
         width: 320px;
         height: 280px;
-        transform: scale(0.8);
+        transform: scale(1.2);
     }
 
     .website-mockup {

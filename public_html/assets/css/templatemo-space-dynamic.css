@@ -606,6 +606,8 @@ header
   }
   .header-area .main-nav .logo {
     color: #1e1e1e;
+    position: relative;
+    z-index: 2;
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
@@ -652,7 +654,7 @@ header
     height: calc(100vh - 80px);
     background: #131c2e;
     box-sizing: border-box;
-    z-index: 998;
+    z-index: 1;
   }
   .background-header .nav {
     margin-top: 80px;
@@ -1453,6 +1455,7 @@ responsive
     margin-right: 0px;
     text-align: center;
     margin-bottom: 45px;
+    padding-top: 30px;
   }
   .main-banner:after {
     top: 76px;
@@ -1475,6 +1478,7 @@ responsive
   }
   .about-us .services {
     text-align: center;
+    justify-content: center;
   }
   .about-us .services .item  {
     background: rgb(255,77,30);
@@ -1483,7 +1487,7 @@ responsive
     border-radius: 20px;
     display: inline-block;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .about-us .services .item .right-text {
     text-align: left;
@@ -1549,6 +1553,9 @@ responsive
 }
 
 @media (max-width: 767px) {
+  #about .section-heading h2 {
+    padding: 0 10px;
+  }
   .about-us .left-image {
     bottom: -280px;
   }
