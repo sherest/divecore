@@ -26,7 +26,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    const forms = document.querySelectorAll(".contact");
+    const forms = document.querySelectorAll(".contact, .audit-form, .newsletter-form-inline");
     const loader = document.getElementById("form-loader");
     
     forms.forEach(function(form) {
@@ -38,6 +38,25 @@
         });
       });
     });
+
+    // Fix for audit form select dropdown
+    const auditSelect = document.querySelector('select[name="audit_type"]');
+    if (auditSelect) {
+      // Ensure the select is properly styled and functional
+      auditSelect.style.pointerEvents = 'auto';
+      auditSelect.style.position = 'relative';
+      auditSelect.style.zIndex = '1000';
+      
+      // Add click event listener as backup
+      auditSelect.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+      
+      // Test functionality
+      auditSelect.addEventListener('change', function() {
+        console.log('Audit type changed to:', this.value);
+      });
+    }
   });
 
   function showToast(message, type = 'success') {
