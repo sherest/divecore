@@ -1,0 +1,27 @@
+# DiveCore Media - Robots.txt
+# Updated: January 2026
+
+User-agent: *
+Allow: /
+Disallow: /public_html/
+Disallow: /vendor/
+Disallow: /templatemo_*/
+Disallow: /*.config$
+
+# Allow all image files
+Allow: /assets/images/
+
+# Sitemap location
+Sitemap: https://www.divecoremedia.com/sitemap.xml
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Crawl-delay for non-Google bots
+User-agent: *
+Crawl-delay: 1
+
